@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="./src/script.js" defer></script>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+ <section id="home" class="relative min-h-screen overflow-hidden">
+
+    <!-- Background video -->
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+    >
+        <source src="./static/Background_hero.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Hero content -->
+    <div id ="hero" class="relative z-10 min-h-screen flex items-center justify-center">
+        <div class="text-center max-w-3xl px-6 text-white">
+
+            <h1 class="text-6xl font-bold">
+                Hello, I'm <span class="text-red-500">Dominik.</span>
+            </h1>
+
+            <p class="mt-8 text-xl text-gray-300">
+                Junior Developer
+            </p>
+
+            <!--Buttons-->
+            <a
+                href="#projects"
+                class="inline-block mt-10 px-8 py-4 border border-red-500
+                       text-red-500 hover:bg-red-500 hover:text-white transition duration-150 ease-in-out"
+            >
+                View my projects
+                <i
+                    data-lucide="chevron-down"
+                    class="inline-block w-4 h-4"
+                    aria-hidden="true">
+                </i>
+            </a>
+            <a
+                href="./static/CV.pdf"
+                class="inline-block mt-10 px-8 py-4 border border-white
+                       text-white hover:bg-white hover:text-black transition duration-150 ease-in-out"
+            >
+                CV
+            </a>
+</section>
+
+            <!--Navbar-->
+            <nav id="navbar" class="absolute bottom-0 left-0 w-full z-20">
+                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                    <a href="#home" class="p-0 ml-0 font-space text-xl font-bold text-white">
+                        Dominik<span class="text-red-500">.</span>
+                    </a>
+
+                    <div class="flex items-center gap-8 font-jetbrains text-sm">
+                        <a href="#home"
+                        class="text-gray-300 hover:text-red-500 transition">
+                            Home
+                        </a>
+                        <a href="#about"
+                        class="text-gray-300 hover:text-red-500 transition">
+                            About
+                        </a>
+                        <a href="#projects"
+                        class="text-gray-300 hover:text-red-500 transition">
+                            Projects
+                        </a>
+                        <a href="#contact"
+                        class="text-gray-300 hover:text-red-500 transition">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+<section id="about" class="relative min-h-screen overflow-hidden">
+    <h1 class="text-6xl font-bold text-center mt-20 text-white">
+        About
+    </h1>
+
+</section>
+<section id="projects" class="relative min-h-screen overflow-hidden">
+    <h1 class="text-6xl font-bold text-center mt-20 text-white">
+        Projects
+    </h1>
+
+</body>
+</html>
