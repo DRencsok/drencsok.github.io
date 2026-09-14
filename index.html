@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
+<header>
  <section id="home" class="relative min-h-screen overflow-hidden">
 
     <!-- Background video -->
@@ -61,7 +62,7 @@
                 CV
             </a>
 </section>
-
+</header>
         <!-- Navbar -->
 <nav id="navbar" class="absolute bottom-0 left-0 w-full z-20">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -133,7 +134,7 @@
 
     </div>
 </nav>
-
+<main>
 <!-- About section -->
 <section id="about" class="relative min-h-screen overflow-hidden flex flex-col">
     <h2 class="text-6xl font-bold text-center mt-20 text-white">
@@ -212,11 +213,11 @@
     <div id="saveit"
      class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6 w-full mt-20 items-center">
     <div>
-        <img
+        <a href="#home"><img
             src="./static/projects/SaveIt.png"
             alt="SaveIt application homepage"
-            class="relative z-[10001] w-full max-w-3xl h-auto mx-auto rounded-lg shadow-2xl shadow-red-500/40"
-        >
+            class="project-card relative z-[10001] w-full max-w-3xl h-auto mx-auto rounded-lg shadow-2xl shadow-red-500/40"
+        ></a>
     </div>
 
     <div>
@@ -264,6 +265,16 @@
                 class="px-8 py-4 border border-red-500 text-red-500
                hover:bg-red-500 hover:text-white transition text-center block mx-auto animate-pulse">Send Message</button>
     </form>
-    
+</section>
+</main>
+<footer>
+    <section class="relative bg-gray-600/40 min-h-18">
+        <div class="flex flex-col items-center justify-center gap-3 px-2">
+            <a class="m-2"  target="_blank" href="https://github.com/DRencsok"><i class="devicon-github-original text-5xl text-white"></i></a>
+        </div>
+        <p class="text-white font-bold text-xs text-center pb-1">Dominik Rencsok &#169 2026</p>
+        <a href="#home" class="absolute right-12 bottom-7 text-white hover:text-red-500 transition"><i data-lucide="arrow-up-from-line" class="w-6 h-6"></i></a>
+    </section>
+</footer> 
 </body> 
 </html>

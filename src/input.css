@@ -48,3 +48,11 @@ textarea:-webkit-autofill:focus {
     box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.1) inset;
     transition: background-color 9999s ease-in-out 0s;
 }
+
+.project-card {
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.10);
+}
