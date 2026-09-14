@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY >= hero.offsetHeight - 70) {
         navbar.classList.remove("absolute", "bottom-0");
         navbar.classList.add("fixed", "top-0");
-    } 
+    }
     else {
         navbar.classList.add("absolute","bottom-0");
         navbar.classList.remove("fixed", "top-0");
@@ -67,6 +67,8 @@ menuButton.addEventListener("click", () => {
 });
 
 contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
