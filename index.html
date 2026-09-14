@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="./static/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="./src/script.js" defer></script>
@@ -42,7 +44,7 @@
             <a
                 href="#projects"
                 class="inline-block mt-10 px-8 py-4 border border-red-500
-                       text-red-500 hover:bg-red-500 hover:text-white transition duration-150 ease-in-out"
+                       text-red-500 hover:bg-red-500 hover:text-white transition duration-150 ease-in-out animate-pulse"
             >
                 View my projects
                 <i
@@ -60,47 +62,208 @@
             </a>
 </section>
 
-            <!--Navbar-->
-            <nav id="navbar" class="absolute bottom-0 left-0 w-full z-20">
-                <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    <a href="#home" class="p-0 ml-0 font-space text-xl font-bold text-white">
-                        Dominik<span class="text-red-500">.</span>
-                    </a>
+        <!-- Navbar -->
+<nav id="navbar" class="absolute bottom-0 left-0 w-full z-20">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-                    <div class="flex items-center gap-8 font-jetbrains text-sm">
-                        <a href="#home"
-                        class="text-gray-300 hover:text-red-500 transition">
-                            Home
-                        </a>
-                        <a href="#about"
-                        class="text-gray-300 hover:text-red-500 transition">
-                            About
-                        </a>
-                        <a href="#projects"
-                        class="text-gray-300 hover:text-red-500 transition">
-                            Projects
-                        </a>
-                        <a href="#contact"
-                        class="text-gray-300 hover:text-red-500 transition">
-                            Contact
-                        </a>
-                    </div>
-                </div>
-            </nav>
+        <!-- Logo -->
+        <a href="#home" class="p-0 ml-0 font-space text-xl font-bold text-white">
+            Dominik<span class="text-red-500">.</span>
+        </a>
+
+        <!-- Desktop navigation -->
+        <div class="hidden md:flex items-center gap-8 font-jetbrains text-sm">
+            <a href="#home"
+               class="text-gray-300 hover:text-red-500 transition"
+               id="navhome">
+                Home
+            </a>
+
+            <a href="#about"
+               class="text-gray-300 hover:text-red-500 transition"
+               id="navabout">
+                About
+            </a>
+
+            <a href="#projects"
+               class="text-gray-300 hover:text-red-500 transition"
+               id="navprojects">
+                Projects
+            </a>
+
+            <a href="#contact"
+               class="text-gray-300 hover:text-red-500 transition"
+               id="navcontact">
+                Contact
+            </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-button"
+                class="md:hidden text-white text-2xl"
+                aria-label="Open navigation menu">
+            <i data-lucide="menu"></i> 
+        </button>
+
+    </div>
+
+    <!-- Mobile navigation -->
+    <div id="mobile-menu"
+         class="hidden md:hidden bg-black/90 font-jetbrains text-m">
+
+        <a href="#home"
+           class="block px-6 py-4 text-gray-300 hover:text-red-500 transition">
+            Home
+        </a>
+
+        <a href="#about"
+           class="block px-6 py-4 text-gray-300 hover:text-red-500 transition">
+            About
+        </a>
+
+        <a href="#projects"
+           class="block px-6 py-4 text-gray-300 hover:text-red-500 transition">
+            Projects
+        </a>
+
+        <a href="#contact"
+           class="block px-6 py-4 text-gray-300 hover:text-red-500 transition">
+            Contact
+        </a>
+
+    </div>
+</nav>
+
+<!-- About section -->
+<section id="about" class="relative min-h-screen overflow-hidden flex flex-col">
+    <h2 class="text-6xl font-bold text-center mt-20 text-white">
+        <span class="relative inline-block text-6xl font-bold text-white
+           after:absolute after:bottom-0 after:left-10
+           after:w-40 after:h-6 after:bg-red-500
+           after:-z-10">About</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-12 text-gray-300 max-w-6xl mx-auto px-6 w-full items-center flex-1">
+        <div class="space-y-6 leading-relaxed mb-0">
+            <p>
+            Hi, I'm <a href="#home" class="text-red-500">Dominik</a>
+            — I like taking a problem apart and figuring out the cleanest way to put it back together, whether that's a small script or a full application.
+            </p>
+            <p>
+            Outside of code, you'll usually find me running, hiking, or with a book
+            — I like staying active and curious about things outside my field too, which tends to show up in how I approach problems.
+            </p>
+            <p>
+            I'm looking for a junior developer role where I can keep building and learning. 
+            Take a look at my <a href="#projects" class="text-red-500">projects</a> below, or get in <a href="#contact" class="text-red-500">touch</a> if you'd like to chat.
+            </p>
+        </div>
+
+        <!--Icons-->
+        <div class="grid grid-cols-3 gap-6">
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-html5-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">HTML</span>
+            </div>
+        
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-css3-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">CSS</span>
+            </div>
+        
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-javascript-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">JavaScript</span>
+            </div>
+        
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-azuresqldatabase-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">SQL</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-python-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">Python</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-git-plain colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">Git</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="devicon-c-original colored text-5xl" aria-hidden="true"></i>
+                <span class="text-white font-bold text-sm">C</span>
+            </div>
         </div>
     </div>
 
-
-<section id="about" class="relative min-h-screen overflow-hidden">
-    <h1 class="text-6xl font-bold text-center mt-20 text-white">
-        About
-    </h1>
-
+    
 </section>
+<!--Projects-->
 <section id="projects" class="relative min-h-screen overflow-hidden">
-    <h1 class="text-6xl font-bold text-center mt-20 text-white">
-        Projects
-    </h1>
+    <h2 class="text-6xl font-bold text-center mt-20 text-white">
+        <span class="relative inline-block text-6xl font-bold text-white
+           after:absolute after:bottom-0 after:left-10
+           after:w-55 after:h-6 after:bg-red-500
+           after:-z-10">Projects</span>
+    </h2>
 
-</body>
+    <!-- SaveIt-->
+    <div id="saveit"
+     class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6 w-full mt-20 items-center">
+    <div>
+        <img
+            src="./static/projects/SaveIt.png"
+            alt="SaveIt application homepage"
+            class="relative z-[10001] w-full max-w-3xl h-auto mx-auto rounded-lg shadow-2xl shadow-red-500/40"
+        >
+    </div>
+
+    <div>
+        <h3 class="text-3xl font-bold text-white mb-4 text-center">SaveIt</h3>
+        <p class="text-gray-300 text-center">
+            SaveIt is a personal expense tracking application.
+            Built with Python, Flask and PostgreSQL.
+        </p>
+        <hr>
+        <a href="https://github.com/DRencsok/expense-tracker" target="_blank"><p class="text-center text-gray-300 underline decoration-red-500 hover:underline-offset-2 hover:decoration-red-500">Learn More</p></a>
+        
+    </div>
+    </div>
+</section>
+
+<!--Contact-->
+<section id="contact" class="relative min-h-screen overflow-hidden">
+    <h2 class="text-6xl font-bold text-center mt-20 text-white">
+        <span class="relative inline-block text-6xl font-bold text-white
+           after:absolute after:bottom-0 after:left-10
+           after:w-53 after:h-6 after:bg-red-500
+           after:-z-10">Contact</span>
+    </h2>
+
+    <!--Form-->
+    <form id="contact-form" class="max-w-xl mx-auto mt-12 space-y-6">
+        <input type="text"
+                id="name"
+                placeholder="Name"
+                required
+                class="w-full p-4 bg-white/10 text-white border border-gray-600"
+        >
+        <input type="email"
+                id="email"
+                placeholder="Email"
+                required
+                class="invalid:border-red-500 invalid:text-red-500 w-full p-4 bg-white/10 text-white border border-gray-600"
+        >
+        <textarea id="message"
+                placeholder="Message"
+                rows="6"
+                required
+                class="w-full p-4 bg-white/10 text-white border border-gray-600"></textarea>
+        <button type="submit"
+                class="px-8 py-4 border border-red-500 text-red-500
+               hover:bg-red-500 hover:text-white transition text-center block mx-auto animate-pulse">Send Message</button>
+    </form>
+    
+</body> 
 </html>
