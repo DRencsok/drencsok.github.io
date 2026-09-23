@@ -12,6 +12,8 @@ const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 const menuButton = document.getElementById("menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
+const typecont = document.getElementById("typing-container");
+const namecont = document.getElementById("name-typing-container");
 
 const contactForm = document.getElementById("contact-form");
 
@@ -87,3 +89,33 @@ contactForm.addEventListener("submit", (event) => {
     `&body=${encodeURIComponent(body)}`;
 
 });
+
+let i = 0;
+const text = `Hello, I'm `;
+let i2 = 0;
+const nametext = `Dominik`;
+
+const intervalId = setInterval(function() {
+    if (i < text.length){
+    typecont.innerHTML += text[i]
+    i ++;
+    }
+
+    if (i >= text.length){
+        clearInterval(intervalId);
+        const nameIntId = setInterval(function() {
+
+            if (i2 < nametext.length){
+            namecont.innerHTML += nametext[i2];
+            i2 ++;
+            }
+
+            if (i2 >= text.length){
+                clearInterval(nameIntId);
+            }
+
+        },100);
+    }
+
+},80);
+
