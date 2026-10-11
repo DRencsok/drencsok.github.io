@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
-<header>
+<header class="relative">
  <section id="home" class="relative min-h-screen overflow-hidden">
 
     <!-- Background video -->
@@ -39,7 +39,7 @@
             </h1>
 
             <p class="mt-8 text-xl text-gray-300">
-                Junior Developer
+                Junior Developer | AEC Student
             </p>
 
             <!--Buttons-->
@@ -63,7 +63,6 @@
                 CV
             </a>
 </section>
-</header>
         <!-- Navbar -->
 <nav id="navbar" class="absolute bottom-0 left-0 w-full z-20">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -135,6 +134,7 @@
 
     </div>
 </nav>
+</header>
 <main>
 <!-- About section -->
 <section id="about" class="relative min-h-screen overflow-hidden flex flex-col">
@@ -192,10 +192,7 @@
                 <span class="text-white font-bold text-sm">Git</span>
             </div>
 
-            <div class="flex flex-col items-center justify-center gap-3">
-                <i class="devicon-c-original colored text-5xl" aria-hidden="true"></i>
-                <span class="text-white font-bold text-sm">C</span>
-            </div>
+           
         </div>
     </div>
 
@@ -215,20 +212,22 @@
      class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto px-6 w-full mt-20 items-center">
     <div>
         <a href="#home"><img
-            src="./static/projects/SaveIt.png"
+            src="./static/projects/Image-not-found.jpg"
             alt="SaveIt application homepage"
             class="project-card relative z-10001 w-full max-w-3xl h-auto mx-auto rounded-lg shadow-2xl shadow-red-500/40"
         ></a>
     </div>
 
     <div>
-        <h3 class="text-3xl font-bold text-white mb-4 text-center">SaveIt</h3>
+        <h3 class="text-3xl font-bold text-white mb-4 text-center">TimberCutOpt</h3>
         <p class="text-gray-300 text-center">
-            SaveIt is a personal expense tracking application.
-            Built with Python, Flask and PostgreSQL.
+            A REST API built with Django and Django REST Framework that serves as the backend for a web and mobile app. 
+            Users submit a cut list (plank lengths and quantities), 
+            and the API calculates the most cost-efficient combination of standard board lengths to purchase, minimizing leftover waste. 
+            Currently in development.
         </p>
         <hr>
-        <a href="https://github.com/DRencsok/expense-tracker" target="_blank"><p class="text-center text-gray-300 underline decoration-red-500 hover:underline-offset-2 hover:decoration-red-500">Learn More</p></a>
+        <a href="https://github.com/DRencsok/TimberCutOpt" target="_blank"><p class="text-center text-gray-300 underline decoration-red-500 hover:underline-offset-2 hover:decoration-red-500">Learn More</p></a>
         
     </div>
     </div>
